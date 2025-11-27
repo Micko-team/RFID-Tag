@@ -5,7 +5,7 @@
 #define RST_PIN 9   
 #define OUTPUT_PIN 2 
 
-bool shiva = true;
+bool Sara = true;
 
 MFRC522 rfid(SS_PIN, RST_PIN);
 
@@ -41,16 +41,16 @@ void loop() {
   Serial.println();
 
   if (match) {
-    if (shiva){
+    if (Sara){
     Serial.println("Turning LED ON");
     digitalWrite(OUTPUT_PIN, HIGH);
-    shiva = false;
+    Sara = false;
     }
 
     else {
     Serial.println("Turning LED OFF");
     digitalWrite(OUTPUT_PIN, LOW);
-    shiva = true;
+    Sara = true;
   }
 
   } else {
